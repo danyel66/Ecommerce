@@ -1,0 +1,42 @@
+{% extends 'core/main.html' %}
+{% block content %}
+<br>
+
+{% include 'core/status.html' %}
+
+  <div class="row">
+    <div class="col-5">
+      <h5>Customers:</h5>
+      <hr>
+      <div class="card card-body">
+        <a href="#" class="btn btn-primary btn-sm btn-block ">create customer</a>
+        <table>
+          <tr>
+            <th></th>
+            <th>Customer</th>
+            <th>Orders</th>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="col-7">
+      <h5>last 5 Orders:</h5>
+      <hr>
+      <div class="card card-body">
+        <a href="#" class="btn btn-primary btn-sm btn-block">create orders</a>
+        <table>
+          <tr>
+            <th></th>
+            <th>Products</th>
+            <th>Date Ordered</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Delete</th>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
