@@ -22,12 +22,12 @@ def home(request):
 	'total_orders':total_orders,'delivered':delivered,
 	'pending':pending }
 
-	return render(request, 'accounts/dashboard.html', context)
+	return render(request, 'core/dashboard.html', context)
 
 def products(request):
 	products = Product.objects.all()
 
-	return render(request, 'accounts/products.html', {'products':products})
+	return render(request, 'core/products.html', {'products':products})
 
 def customer(request, pk_test):
 	customer = Customer.objects.get(id=pk_test)
@@ -40,7 +40,7 @@ def customer(request, pk_test):
 
 	context = {'customer':customer, 'orders':orders, 'order_count':order_count,
 	'myFilter':myFilter}
-	return render(request, 'accounts/customer.html',context)
+	return render(request, 'core/customer.html',context)
 
 
 def createOrder(request, pk):
@@ -57,7 +57,7 @@ def createOrder(request, pk):
 			return redirect('/')
 
 	context = {'form':formset}
-	return render(request, 'accounts/order_form.html', context)
+	return render(request, 'core/order_form.html', context)
 
 def updateOrder(request, pk):
 
@@ -71,7 +71,7 @@ def updateOrder(request, pk):
 			return redirect('/')
 
 	context = {'form':form}
-	return render(request, 'accounts/order_form.html', context)
+	return render(request, 'core/order_form.html', context)
 
 def deleteOrder(request, pk):
 	order = Order.objects.get(id=pk)
@@ -80,4 +80,4 @@ def deleteOrder(request, pk):
 		return redirect('/')
 
 	context = {'item':order}
-	return render(request, 'accounts/delete.html', context)
+	return render(request, 'core/delete.html', context)
