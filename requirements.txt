@@ -2,7 +2,7 @@ asgiref==3.2.7
 astroid==2.4.1
 certifi==2020.4.5.1
 cloudinary==1.20.0
-Django==3.0.6
+Django==3.0.12
 django-filter==2.2.0
 django-filters==0.2.1
 isort==4.3.21
